@@ -110,3 +110,7 @@ def list_to_dic(list):
 # Download 5 files 
 for x in random_list_str:
     download_file(x)    
+
+# Clear files from unwanted additions
+for x in random_list_str:
+    clear_file(x)    
