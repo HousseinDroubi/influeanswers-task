@@ -121,3 +121,6 @@ for x in random_list_str:
 
 # Split conversations into one list
 chat_list = chat_to_list(all_chat)
+
+# Get the dataframe from the obtained list
+dataframe = list_to_dic(chat_list)
