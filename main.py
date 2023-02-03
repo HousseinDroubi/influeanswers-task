@@ -97,3 +97,12 @@ def list_to_dic(list):
         index = chat.find(">")
         text = chat[index+2:]
         char_message_list.append(text)
+
+    # Build the the whole list and return it
+    dict = {"CHAT_DAY": chat_day_list,
+        "CHAT_HOUR": chat_hour_list,
+        "CHAT_MINUTE": chat_minute_list,
+        "USERNAME":chat_username_list,
+        "CHAT_MESSAGE":char_message_list}
+    df = pd.DataFrame(dict)
+    return df    
