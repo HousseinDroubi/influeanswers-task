@@ -72,8 +72,28 @@ def chat_to_list(chats):
 
 # The below function is to build the dataframe as required
 def list_to_dic(list):
+    # Define lists
     chat_day_list=[]
     chat_hour_list=[]
     chat_minute_list=[]
     chat_username_list=[]
-    char_message_list=[]    
+    char_message_list=[]
+
+    # Fill lists by dataframe attributes
+    for chat in list:
+        chat_day = chat[:10]
+        chat_day_list.append(chat_day)
+
+        chat_time = chat[11:16]
+        hours, minutes = map(str, chat_time.split(':'))
+        chat_hour_list.append(hours)
+        chat_minute_list.append(minutes)
+
+        username = chat[21:]
+        user_chat_list = username.split(">")
+        username = user_chat_list[0]
+        chat_username_list.append(username)
+
+        index = chat.find(">")
+        text = chat[index+2:]
+        char_message_list.append(text)
