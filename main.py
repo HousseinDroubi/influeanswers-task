@@ -54,3 +54,12 @@ def clear_file(day):
     for item in cleared_list:
         file.write(item+"\n")
     file.close()
+
+# The below function is to read contents from the text file
+all_chat = ""
+def read_file(day):
+    global all_chat
+    date = "2014-06-"+day
+    with open('chat-days/'+date+'.txt') as f:
+        contents =f.read()
+    all_chat=all_chat+contents    
