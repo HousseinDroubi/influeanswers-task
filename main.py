@@ -31,3 +31,26 @@ def clear_file(day):
         contents = f.read()
     my_list = contents.split("\n")
     cleared_list = []    
+    
+    for index, val in enumerate(my_list):
+        # The unwanted additions in this case are 'has quit', 'has left' and 'has joined' which are the most repeated words.
+        has_quit = 'has quit'
+        has_joined = 'has joined'
+        has_left = 'has left'
+        if(has_quit in val ):
+            my_list[index]=''    
+        if(has_joined in val ):
+            my_list[index]=''
+        if(has_left in val ):
+            my_list[index]=''
+
+    # Build a new list
+    for index,val in enumerate(my_list):
+        if(not val.__eq__('')):
+            cleared_list.append(date+" "+val)
+
+    # Edit saved files by overwriting
+    file = open("chat-days/"+date+'.txt','w')
+    for item in cleared_list:
+        file.write(item+"\n")
+    file.close()
