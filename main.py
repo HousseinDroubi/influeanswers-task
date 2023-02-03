@@ -68,4 +68,12 @@ def read_file(day):
 def chat_to_list(chats):
     my_list = chats.split("\n")
     my_list.pop(len(my_list)-1)
-    return my_list    
+    return my_list
+
+# The below function is to build the dataframe as required
+def list_to_dic(list):
+    chat_day_list=[]
+    chat_hour_list=[]
+    chat_minute_list=[]
+    chat_username_list=[]
+    char_message_list=[]    
