@@ -117,4 +117,7 @@ for x in random_list_str:
 
 # Read the contents from the 5 files
 for x in random_list_str:
-    read_file(x)    
+    read_file(x)
+
+# Split conversations into one list
+chat_list = chat_to_list(all_chat)
