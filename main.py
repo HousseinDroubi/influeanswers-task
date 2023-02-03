@@ -23,3 +23,11 @@ def download_file(day):
     with open(target_txt_path, "wb") as f:
         f.write(response.content)
     print("File downloaded.")
+
+# The below function is to remove unwanted additions
+def clear_file(day):
+    date = "2014-06-"+day
+    with open("chat-days/"+date+'.txt') as f:
+        contents = f.read()
+    my_list = contents.split("\n")
+    cleared_list = []    
