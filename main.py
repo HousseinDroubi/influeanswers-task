@@ -125,5 +125,8 @@ chat_list = chat_to_list(all_chat)
 # Get the dataframe from the obtained list
 dataframe = list_to_dic(chat_list)
 
-# print the dataframe
+# Print the dataframe
 print(dataframe)
+
+# Save all conversations into one csv file
+dataframe.to_csv('chat-days/conversations.csv')
