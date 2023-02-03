@@ -113,4 +113,8 @@ for x in random_list_str:
 
 # Clear files from unwanted additions
 for x in random_list_str:
-    clear_file(x)    
+    clear_file(x)
+
+# Read the contents from the 5 files
+for x in random_list_str:
+    read_file(x)    
