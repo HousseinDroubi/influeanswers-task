@@ -106,3 +106,7 @@ def list_to_dic(list):
         "CHAT_MESSAGE":char_message_list}
     df = pd.DataFrame(dict)
     return df    
+ 
+# Download 5 files 
+for x in random_list_str:
+    download_file(x)    
