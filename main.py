@@ -62,4 +62,10 @@ def read_file(day):
     date = "2014-06-"+day
     with open('chat-days/'+date+'.txt') as f:
         contents =f.read()
-    all_chat=all_chat+contents    
+    all_chat=all_chat+contents
+
+# The below function is to split conversations by new line
+def chat_to_list(chats):
+    my_list = chats.split("\n")
+    my_list.pop(len(my_list)-1)
+    return my_list    
